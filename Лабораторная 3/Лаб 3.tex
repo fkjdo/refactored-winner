@@ -1,0 +1,113 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath, amssymb}
+
+\usepackage[T2A]{fontenc}
+\usepackage[english, russian]{babel}
+
+\usepackage[top = 20 mm,
+            bottom = 20 mm,
+            left = 30 mm,
+            right = 30 mm]{geometry}
+            
+\usepackage{indentfirst}
+
+\setlength{\parindent}{12.5 mm}
+
+\usepackage{setspace}
+\setstretch{1}
+
+\setcounter{equation}{61}
+ 
+\begin{document}
+
+\begin{center}
+{\bf УРАВНЕНИЯ ГИПЕРБОЛИЧЕСКОГО ТИПА}
+\end{center}
+
+Из уравнения  (80) и условий  (81) находим:
+$$
+X_{1}(x) = C \sin\frac{\omega}{\alpha}x, X_{2}(x) = D \sin\frac{\omega}{\alpha}(l-x);
+$$
+условия сопряжения  (82) дают:
+$$
+\begin{aligned}
+C \sin\frac{\omega}{\alpha}x_{0} - D \sin\frac{\omega}{\alpha}(l-x_{0}) = 0,\\
+C\frac{\omega}{\alpha}\cos\frac{\omega}{\alpha}x_{0} + D \frac{\omega}{\alpha}\cos\frac{\omega}{\alpha}(l-x_{0}) =\frac{A}{\kappa}.
+\end{aligned}
+$$
+Определяя отсюда коэфициенты C и D, получаем:
+\begin{equation*}
+u(x, t) = 
+ \begin{cases}
+   u_{1} = \frac{Aa}{\kappa\omega}\frac{\sin\frac{\omega}{\alpha}(l-x_{0})}{\sin\frac{\omega}{\alpha}l}\sin\frac{\omega}{\alpha}x\cos(\omega t) \text{ при } 0\leqslant x \leqslant x_{0}, 
+   \\
+   u_{2} = \frac{Aa}{\kappa\omega}\frac{\sin\frac{\omega}{\alpha}x_{0}}{\sin\frac{\omega}{\alpha}l}\sin\frac{\omega}{\alpha}(l - x)\cos(\omega t) \text{ при } x_{0}\leqslant x \leqslant 1.
+ \end{cases}
+\end{equation*}
+Аналогично записывается решение при  $f(t) = A\sin\omega t$.
+
+Итак, получено решение для случая $f(t) = A\cos\omega t$ или $f(t) = A\sin\omega t$. Если f(t) - периодическая функция, равная
+$$
+f(t) = \frac{\alpha_{u}}{2} + \sum\limits_{n=1}^{\infty}(a_{n}\cos(\omega n t) + \beta_{n}\sin(\omega n t)
+$$
+($\omega$ - наименьшая частота), то, очевидно,
+\begin{equation*}
+u(x, t) = 
+ \begin{cases}
+u_{1} = \frac{1}{k}
+ \begin{cases}
+ \frac{\alpha_{0}x}{2}(1 - \frac{x_{0}}{l}) +  \sum\limits_{n=1}^{\infty}\frac{\alpha\sin\frac{\omega n}{\alpha}(l - x_{0})}{\omega n\sin\frac{\omega n}{\alpha}l}\sin\frac{\omega nx}{\alpha}\times
+   \end{cases}
+   \\
+\times(a_{n}\cos(\omega n t) + \beta_{n}\sin(\omega n t),\text{ } 0\leqslant x \leqslant x_{0}
+\\
+u_{2} = \frac{1}{k}
+ \begin{cases}
+   \frac{\alpha_{0}x_{0}}{2}(1 - \frac{x_{0}}{l}) +  \sum\limits_{n=1}^{\infty}\frac{\alpha\sin\frac{\omega n}{\alpha}l}{\omega n\sin\frac{\omega n}{\alpha}l}\sin\frac{\omega n(l - x)}{\alpha}\times
+ \end{cases}
+\\
+\times(a_{n}\cos(\omega n t) + \beta_{n}\sin(\omega n t),\text{ } x_{0}\leqslant x \leqslant 1
+ \end{cases}
+\end{equation*}
+
+\newpage
+
+\begin{center}
+{\bf МЕТОД РАЗДЕЛЕНИЯ ПЕРЕМЕННЫХ}
+\end{center}
+Если функция f(t) непериодическая, то, представляя её в виде интерала Фурье, аналогичным методом можно получить решение в итегральной форме.
+
+Если знаменатель y этих функций (83) равен нулю
+$$
+\begin{aligned}
+\sin\frac{\omega nl}{\alpha} = 0,\\
+\omega n = \frac{\pi m}{l} = \omega_{m}.
+\end{aligned}
+$$
+т.е. если спектр частот возбуждающей силы содержит одну из частот собственных колебаний (резонанс), то установившегося решения не существует.
+
+Если точка приложения силы $x_{0}$ является одним из узлов стоячей волны, соответсвующей свободному колебанию с частотой $\omega_{m}$, то
+$$
+\begin{aligned}
+\sin\frac{\omega_{m}}{\alpha}x_{0} = 0,\\
+\sin\frac{\omega_{m}}{\alpha}(l - x_{0}) = 0.
+\end{aligned}
+$$
+При этом числители соответствующих слагаемых для u обращаются в нуль, и явление резонанса не имеет места. Если же точка приложения силы, действующей с частотой $\omega_{m}$, является пучностью соответсвующей стоячей волны с частотой $\omega_{m}$, то
+$$
+\sin\frac{\omega_{m}{\alpha}}x_{0} = 1,
+$$
+и явление резонанса будет выражено наиболее резко.
+
+Отсюда следует правило, что для возбуждения резонанса струны при действии на неё сосредоточенной силой надо. чтобы частота её $\omega$ была равна одной из собственных частот струны, а точка приложения силы совпадала с одной из пучностей стоячей волны.
+
+\textbf{9. Общая схема метода разделения переменных.} Метод разделения переменных применим не только для уравнения колебаний однородной струны, но и для уравнения колебаний неоднородной струны. Рассмотрим следующую задачу:
+
+\textit{найти решение уравнения}
+$$
+$$
+\textit{удовлетворяющее условиям}
+\end{document}
